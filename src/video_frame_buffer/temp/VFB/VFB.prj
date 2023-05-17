@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW1NR-9C" package="QFN88P" speed="6" partNumber="GW1NR-LV9QN88PC6/I5"/>
+    <FileList>
+        <File path="/opt/Gowin/IDE/ipcore/VFB/data/vfb_top.v" type="verilog"/>
+        <File path="/opt/Gowin/IDE/ipcore/VFB/data/vfb_wrapper.vp" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="dsp_balance" value="1"/>
+        <Option type="include_path" value="/opt/Gowin/IDE/ipcore/VFB/data"/>
+        <Option type="include_path" value="/media/mac_folder/env/Camera/src/video_frame_buffer/temp/VFB"/>
+        <Option type="output_file" value="video_frame_buffer.vg"/>
+        <Option type="output_template" value="video_frame_buffer_tmp.v"/>
+        <Option type="ram_balance" value="1"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="top_module" value="Video_Frame_Buffer_Top"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+    </OptionList>
+</Project>
