@@ -13,6 +13,8 @@ module top(
 CLK_27M,
 RST_N,
 LED,
+UART_RX,
+UART_TX,
 XCLK,
 PCLK,
 SCL,
@@ -35,6 +37,9 @@ O_psram_reset_n
 input    wire          CLK_27M;
 input    wire          RST_N;
 output   wire  [ 5: 0] LED;
+// UART
+input    wire          UART_RX;
+output   wire          UART_TX;
 // OV7060 Interface
 output   wire          XCLK;
 input    wire          PCLK;
@@ -92,11 +97,14 @@ wire  [15: 0]          off0_syn_data;
 reg   [N-1: 0]         Pout_hs_dn;
 reg   [N-1: 0]         Pout_vs_dn;
 reg   [N-1: 0]         Pout_de_dn;
-//rgb data
+// rgb data
 wire                   rgb_vs;
 wire                   rgb_hs;
 wire                   rgb_de;
 wire  [23: 0]          rgb_data;
+// UART data
+reg   [ 8: 0]          uart_data;
+wire                   uart_is_ready;
 
 
 // DVI(serial) clock
@@ -125,6 +133,16 @@ clkdiv1 U_clkdiv1(
 
 assign pll_rst = RST_N & ~lock_en_1 & ~lock_en_2;
 assign XCLK    = clk_25m;
+
+// simでの動作確認済み(実機は未)
+//uart_top U_uart_top(
+//    .clk                ( XCLK            ), // in
+//    .rst_n              ( ~pll_rst        ), // in
+//    .rxd                ( UART_RX         ), // in
+//    .txd                ( UART_TX         ), // out
+//    .data               ( uart_data       ), // out
+//    .uart_is_ready      ( uart_is_ready   )  // out
+//);
 
 sccb_top U_sccb_top(
     .clk_25m            ( XCLK            ), // in
