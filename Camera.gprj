@@ -1,0 +1,28 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NR-9C" pn="GW1NR-LV9QN88PC6/I5">gw1nr9c-004</Device>
+    <FileList>
+        <File path="src/camera/camera_if.sv" type="file.verilog" enable="1"/>
+        <File path="src/camera/camera_pg.sv" type="file.verilog" enable="1"/>
+        <File path="src/camera/camera_top.sv" type="file.verilog" enable="1"/>
+        <File path="src/dvi_tx/dvi_tx.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_clkdiv/gowin_clkdiv1.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_rpll/gowin_rpll1.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_rpll/gowin_rpll2.v" type="file.verilog" enable="1"/>
+        <File path="src/psram_memory_interface_hs/psram_memory_interface_hs.v" type="file.verilog" enable="1"/>
+        <File path="src/sccb/sccb_if.sv" type="file.verilog" enable="1"/>
+        <File path="src/sccb/sccb_rom.sv" type="file.verilog" enable="1"/>
+        <File path="src/sccb/sccb_top.sv" type="file.verilog" enable="1"/>
+        <File path="src/syn_gen.v" type="file.verilog" enable="1"/>
+        <File path="src/top.sv" type="file.verilog" enable="1"/>
+        <File path="src/uart/uart_rx.sv" type="file.verilog" enable="1"/>
+        <File path="src/uart/uart_top.sv" type="file.verilog" enable="1"/>
+        <File path="src/uart/uart_tx.sv" type="file.verilog" enable="1"/>
+        <File path="src/video_frame_buffer/video_frame_buffer.v" type="file.verilog" enable="1"/>
+        <File path="src/camera.cst" type="file.cst" enable="1"/>
+        <File path="src/camera.sdc" type="file.sdc" enable="1"/>
+    </FileList>
+</Project>
